@@ -7,6 +7,7 @@ sessions
 *.w2p
 
 httpserver.log
+httpserver.pid
 parameters_*.py
  
 # inherit https://github.com/github/gitignore/blob/master/Python.gitignore

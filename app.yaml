@@ -33,12 +33,12 @@ handlers:
   secure: optional
 
 - url: /favicon.ico
-  static_files: applications/welcome/static/favicon.ico
-  upload: applications/welcome/static/favicon.ico
+  static_files: applications/guide/static/favicon.ico
+  upload: applications/guide/static/favicon.ico
 
 - url: /robots.txt
-  static_files: applications/welcome/static/robots.txt
-  upload: applications/welcome/static/robots.txt
+  static_files: applications/guide/static/robots.txt
+  upload: applications/guide/static/robots.txt
 
 - url: .*
   script: gaehandler.wsgiapp    # WSGI (Python 2.7 only)
@@ -60,8 +60,10 @@ skip_files: |
  (.*\.py[co])|
  (.*/RCS/.*)|
  (\..*)|
+ (assets/.*)|
+ (applications/welcome/.*)|
  (applications/examples/.*)|
- ((examples|welcome)\.(w2p|tar))|
+ ((examples|welcome|guide)\.(w2p|tar))|
  (applications/.*?/(cron|databases|errors|cache|sessions)/.*)|
  ((logs|scripts)/.*)|
  (anyserver\.py)|
