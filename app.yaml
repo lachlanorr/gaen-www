@@ -33,8 +33,12 @@ handlers:
   secure: optional
 
 - url: /favicon.ico
-  static_files: applications/guide/static/favicon.ico
-  upload: applications/guide/static/favicon.ico
+  static_files: applications/guide/static/images/favicon.ico
+  upload: applications/guide/static/images/favicon.ico
+
+- url: /apple-touch-icon.png
+  static_files: applications/guide/static/images/favicon.png
+  upload: applications/guide/static/images/favicon.png
 
 - url: /robots.txt
   static_files: applications/guide/static/robots.txt
