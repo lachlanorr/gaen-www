@@ -32,8 +32,8 @@
         user-scalable = yes allows the user to zoom in -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="shortcut icon" href="/guide/static/images/favicon.ico')}}" type="image/x-icon" />
-  <link rel="apple-touch-icon" href="/guide/static/images/favicon.png')}}" />
+  <link rel="shortcut icon" href="/guide/static/images/favicon.ico?v=4')}}" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="/guide/static/images/favicon.png?v=4')}}" />
 
   <!-- All JavaScript at the bottom, except for Modernizr which enables
        HTML5 elements & feature detects -->
@@ -103,39 +103,15 @@
 	{{pass}}
     </header>
 
-    <section id="main" class="main row">
-        {{if left_sidebar_enabled:}}
-        <div class="span3 left-sidebar">
-            {{block left_sidebar}}
-            <h3>Left Sidebar</h3>
-            <p></p>
-            {{end}}
-        </div>
-        {{pass}}
-
-        <div class="{{=middle_columns}}">
-            {{block center}}
-            {{include}}
-            {{end}}
-        </div>
-
-        {{if right_sidebar_enabled:}}
-        <div class="span3">
-            {{block right_sidebar}}
-            <h3>Right Sidebar</h3>
-            <p></p>
-            {{end}}
-        </div>
-        {{pass}}
-    </section><!--/main-->
+    {{include}}
 
     <!-- Footer ================================================== -->
     <div class="row">
         <footer class="footer span12" id="footer">
             <div class="footer-content">
                 {{block footer}} <!-- this is default footer -->
-                <div class="copyright center">{{=T('Copyright')}} &#169; {{=request.now.year}} Lachlan Orr</div>
-                <div class="copyright center">For questions, comments, or concerns, send mail to lorr@gaen.org.</div>
+                <div class="copyright center">{{=T('Copyright')}} &#169; 2013-{{=request.now.year}} Lachlan Orr</div>
+                <div class="copyright center">lorr@gaen.org</div>
                 {{end}}
             </div>
         </footer>

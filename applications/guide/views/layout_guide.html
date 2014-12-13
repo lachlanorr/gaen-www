@@ -1,0 +1,31 @@
+{{left_sidebar_enabled=True}}
+{{extend 'layout.html'}}
+
+    <section id="main" class="main row">
+        {{if left_sidebar_enabled:}}
+        <div class="span3 left-sidebar">
+            {{block left_sidebar}}
+            <h3>Topics</h3>
+            <ul>
+              <ui>abc</ui>
+              <ui>def</ui>
+            </ul>
+            {{end}}
+        </div>
+        {{pass}}
+
+        <div class="{{=middle_columns}}">
+            {{block center}}
+            {{include}}
+            {{end}}
+        </div>
+
+        {{if right_sidebar_enabled:}}
+        <div class="span3">
+            {{block right_sidebar}}
+            <h3>Right Sidebar</h3>
+            <p></p>
+            {{end}}
+        </div>
+        {{pass}}
+    </section><!--/main-->

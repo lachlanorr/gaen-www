@@ -21,17 +21,6 @@ handlers:
 # the parametric router's language logic. 
 # You cannot use them together.
 
-- url: /(.+?)/static/_\d.\d.\d\/(.+)
-  static_files: applications/\1/static/\2
-  upload: applications/(.+?)/static/(.+)
-  secure: optional
-  expiration: "365d"
-
-- url: /(.+?)/static/(.+)
-  static_files: applications/\1/static/\2
-  upload: applications/(.+?)/static/(.+)
-  secure: optional
-
 - url: /favicon.ico
   static_files: applications/guide/static/images/favicon.ico
   upload: applications/guide/static/images/favicon.ico
@@ -43,6 +32,17 @@ handlers:
 - url: /robots.txt
   static_files: applications/guide/static/robots.txt
   upload: applications/guide/static/robots.txt
+
+- url: /(.+?)/static/_\d.\d.\d\/(.+)
+  static_files: applications/\1/static/\2
+  upload: applications/(.+?)/static/(.+)
+  secure: optional
+  expiration: "365d"
+
+- url: /(.+?)/static/(.+)
+  static_files: applications/\1/static/\2
+  upload: applications/(.+?)/static/(.+)
+  secure: optional
 
 - url: .*
   script: gaehandler.wsgiapp    # WSGI (Python 2.7 only)
