@@ -1,0 +1,62 @@
+{{extend 'layout_guide.html'}}
+
+<h3>{{=T('Getting Started')}}</h3>
+
+<h4>{{=T('Creating a Project')}}</h4>
+
+<p>
+  By itself, Gaen can build an executable and run stand alone. In most cases, however, it is preferrable
+  to create a project based on Gaen, whereby you can have some project specific C++ as well as your
+  project specific Compose scripts living side by side with the Gaen source code.
+</p>
+
+<p>
+  Create a new project as follows. In this example, we'll create a project called 'foo'.
+
+  <ol>
+
+    <li>
+      Make a new blank directory for your project, and cd into it.
+
+      {{=PRE(r'''C:\code> mkdir foo
+C:\code> cd foo
+''')}}
+    </li>
+
+    <li>
+      Clone the Gaen repository and run start_project.py.
+
+      {{=PRE(r'C:\code\foo> git clone https://github.com/lachlanorr/gaen.git')}}
+    </li>
+
+    <li>
+      You will be prompted to continue, press 'Y' to create the project.
+
+      {{=PRE('''Starting new project 'foo' in current directory...
+Continue? [Y/n] Y
+
+Gaen project 'foo' created in current directory.
+Run bootstrap.bat to generate Visual Studio solution.
+''')}}
+
+      The project name is inferred from the current working directory.
+      When completed, several files will be placed within the foo
+      directory.
+    </li>
+
+    <li>
+      Run bootstrap.bat to compile initial compose scripts as well
+      as run cmake and create the Visual Studio solution.
+
+      {{=PRE(r'C:\code\foo> bootstrap.bat')}}
+    </li>
+
+    <li>
+      Open the solution.
+
+      {{=PRE(r'C:\code\foo> build\win64\foo.sln')}}
+    </li>
+  
+  </ol>
+</p>
+

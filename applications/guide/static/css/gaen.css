@@ -54,6 +54,18 @@ hr {
     color: #767676;
 }
 
+ul {
+    list-style-type: none;
+}
+
+pre {
+    color: #e3e3e3;
+    background: #000;
+    border: 1px solid #e3e3e3;
+    margin: 10px;
+}
+
+
 /*
 #header {
     text-align: left;

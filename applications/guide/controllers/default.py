@@ -20,3 +20,6 @@ def index():
     response.page_image = IMG(_src=URL('static', 'images/guide.png'))
     return {}
 
+def getting_started():
+    response.page_image = IMG(_src=URL('static', 'images/guide.png'))
+    return {}
