@@ -10,6 +10,14 @@ h1, h2, h3, h4, h5, h6 {
     color: #e3e3e3;
 }
 
+h4 {
+    margin-top: 20px;
+}
+
+ol.build_steps>li {
+    margin-bottom: 10px;
+}
+
 .navbar .nav>li>a {
     padding: 14px 15px 10px;
 }

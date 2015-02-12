@@ -1,25 +1,48 @@
 {{extend 'layout_guide.html'}}
 
-<h3>{{=T('Getting Started')}}</h3>
+<h3>Getting Started</h3>
 
-<h4>{{=T('Creating a Project')}}</h4>
+<h4>Prerequisites</h4>
+<p>
+On Linux or OSX, you're best to install with your package manager.
+</p>
 
 <p>
-  By itself, Gaen can build an executable and run stand alone. In most cases, however, it is preferrable
-  to create a project based on Gaen, whereby you can have some project specific C++ as well as your
-  project specific Compose scripts living side by side with the Gaen source code.
+On OSX, I recommend {{=A('Homebrew', _href='http://brew.sh')}}.
+</p>
+
+<p>
+On Windows, follow the links below.
+</p>
+
+
+Install the following:
+<ul>
+  <li>{{=A('Python 2.7', _href='https://www.python.org/downloads/')}}</li>
+  <li>{{=A('git', _href='http://git-scm.com/download/win')}}</li>
+  <li>{{=A('cmake', _href='http://www.cmake.org/download/')}} or greater</li>
+</ul>
+
+
+<h4>Creating a Project</h4>
+
+<p>
+  Gaen can build and run stand alone. In most cases, however, it is
+  preferrable to create a project based on Gaen, whereby you can have
+  some project specific C++ as well as your project specific Compose
+  scripts living side by side with the Gaen source code.
 </p>
 
 <p>
   Create a new project as follows. In this example, we'll create a project called 'foo'.
 
-  <ol>
+  <ol class="build_steps">
 
     <li>
       Make a new blank directory for your project, and cd into it.
 
-      {{=PRE(r'''C:\code> mkdir foo
-C:\code> cd foo
+      {{=PRE('''C:\\code> mkdir foo
+C:\\code> cd foo
 ''')}}
     </li>
 
@@ -58,5 +81,10 @@ Run bootstrap.bat to generate Visual Studio solution.
     </li>
   
   </ol>
+
+  On Linux or OSX, these instructions are nearly identical, except you need
+  to run bootstrap.sh. On OSX, you'll open the generated Xcode project. On
+  Linux, you'll run make against the generated Makefile.
 </p>
+
 
